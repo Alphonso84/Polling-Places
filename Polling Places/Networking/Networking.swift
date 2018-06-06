@@ -15,7 +15,7 @@ import Foundation
 class Networking {
     
     
-    var arrayOfPollingPlaces = [Array<Any>]()
+    var arrayOfPollingPlaces = [Any]()
     
     func buildURL() ->URL {
         let sheetID = "10lmotsMdxB97YqzuDMfcCcRRhV8lTbOX51awdMlaVT0"
@@ -46,17 +46,15 @@ class Networking {
                 //let jsonDecoder = JSONDecoder()
                 //let jsonData = try jsonDecoder.decode(Array<Sheet1>.self, from: unwrappedData)
                 //USE SERILIZATION BELOW IF DECODER DOESNT WORK
-                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! [String:Array<Any>]
+                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! NSDictionary
                 
-                let pollingArray = jsonData["Sheet1"]
-              
+               // let pollingArray = jsonData["Sheet1"]
+               // self.arrayOfPollingPlaces.append(pollingArray)
                 
                 //PRINT OUT ANY DATA COMBINATION HERE
                 
                 
-                
-                
-                print(pollingArray!)
+                print(jsonData["Sheets1"])
                 
                 
             } catch {

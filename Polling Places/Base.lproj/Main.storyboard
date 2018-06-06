@@ -35,7 +35,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Myz-Kq-Nd2"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vote Oakland" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIs-vk-sTs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oakland Polling Places" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIs-vk-sTs">
                                 <rect key="frame" x="16" y="44" width="343" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="hR3-o5-RpM"/>
