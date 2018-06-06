@@ -14,6 +14,15 @@ struct PollingPlaces{
     let name: String
     let precinct: String
     let location: String
+    
+    
+    init(dictionary: [String : AnyObject]) {
+        name = dictionary["NAME"] as! String
+        precinct = dictionary["PRECINCT"] as! String
+        address = dictionary["ADDRESS"] as! String
+        location = dictionary["LOCATION"] as! String
+        
+    }
 }
 
 
