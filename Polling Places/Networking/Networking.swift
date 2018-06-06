@@ -8,25 +8,36 @@
 
 import Foundation
 
-var Sheet1 = [PollingPlaces]()
 
-let sheetID = "10lmotsMdxB97YqzuDMfcCcRRhV8lTbOX51awdMlaVT0"
 
-let sheetName = "Sheet1"
+
 
 class Networking {
     
     
+    var arrayOfPollingPlaces = [Array<Any>]()
     
-    let url = URL(string: "https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=\(sheetID)&sheet=\(sheetName)")
+    func buildURL() ->URL {
+        let sheetID = "10lmotsMdxB97YqzuDMfcCcRRhV8lTbOX51awdMlaVT0"
+        
+        let sheetName = "Sheet1"
+        
+        let url = URL(string: "https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=\(sheetID)&sheet=\(sheetName)")
+        
+        print(url)
+        return url!
+    }
+    
+    
+   
     
     func parseJSON() {
-        let unwrappedURL = url
+        let unwrappedURL = buildURL()
         //URL SESSION
         let session = URLSession.shared
         
         
-        let task = session.dataTask(with: (unwrappedURL)!) { (data, response, error) in
+        let task = session.dataTask(with: (unwrappedURL)) { (data, response, error) in
             print("Start")
             
             guard let unwrappedData = data else {return}
@@ -35,13 +46,17 @@ class Networking {
                 //let jsonDecoder = JSONDecoder()
                 //let jsonData = try jsonDecoder.decode(Array<Sheet1>.self, from: unwrappedData)
                 //USE SERILIZATION BELOW IF DECODER DOESNT WORK
-                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! NSDictionary
+                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! [String:Array<Any>]
                 
-               // Sheet1 = jsonData
+                let pollingArray = jsonData["Sheet1"]
+              
                 
                 //PRINT OUT ANY DATA COMBINATION HERE
                 
-                print(jsonData)
+                
+                
+                
+                print(pollingArray!)
                 
                 
             } catch {

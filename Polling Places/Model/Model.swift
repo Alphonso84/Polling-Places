@@ -8,11 +8,12 @@
 
 import Foundation
 
-struct PollingPlaces {
-    let address: [String:Any]
-    let name: [String:Any]
-    let precinct: [String:Any]
-    let location: [String:Any]
+struct PollingPlaces{
+    
+    let address: String
+    let name: String
+    let precinct: String
+    let location: String
 }
 
 
