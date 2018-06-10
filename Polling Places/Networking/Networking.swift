@@ -43,12 +43,13 @@ class Networking {
             guard let unwrappedData = data else {return}
             do {
                 
-                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! Dictionary<String,Any>
+                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! NSDictionary
                 
                 let pollingArray = jsonData["Sheet1"]
                 
+                //NEED TO WRITE METHOD TO MAP JSON TO POLLINGPLACES MODEL HERE
                 
-               // self.arrayOfPollingPlaces.append(pollingArray)
+               
                 
                 //PRINT OUT ANY DATA COMBINATION HERE
                 
