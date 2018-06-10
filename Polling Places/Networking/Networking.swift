@@ -43,18 +43,17 @@ class Networking {
             guard let unwrappedData = data else {return}
             do {
                 
-                //let jsonDecoder = JSONDecoder()
-                //let jsonData = try jsonDecoder.decode(Array<Sheet1>.self, from: unwrappedData)
-                //USE SERILIZATION BELOW IF DECODER DOESNT WORK
-                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! NSDictionary
+                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! Dictionary<String,Any>
                 
-               // let pollingArray = jsonData["Sheet1"]
+                let pollingArray = jsonData["Sheet1"]
+                
+                
                // self.arrayOfPollingPlaces.append(pollingArray)
                 
                 //PRINT OUT ANY DATA COMBINATION HERE
                 
                 
-                print(jsonData["Sheets1"])
+                print(pollingArray)
                 
                 
             } catch {
