@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = arrayOfPollingPlaces[indexPath.row] as? String
+        cell.textLabel?.text = arrayOfPollingPlaces[indexPath.row]["NAME"] as? String
         
         return cell
     }

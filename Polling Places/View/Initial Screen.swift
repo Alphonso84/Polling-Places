@@ -11,6 +11,8 @@ import UIKit
 
 class InitialScreenView: UIViewController {
     
+    @IBAction func getPollingPlaces(_ sender: Any) {
+    }
     
     
     
