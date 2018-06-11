@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		893B372C20CF1E6B001F4A01 /* Initial Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893B372B20CF1E6B001F4A01 /* Initial Screen.swift */; };
 		89A54E0B20C71FE400B3155E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A54E0A20C71FE400B3155E /* AppDelegate.swift */; };
 		89A54E0D20C71FE400B3155E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A54E0C20C71FE400B3155E /* ViewController.swift */; };
 		89A54E1020C71FE400B3155E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A54E0E20C71FE400B3155E /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		893B372B20CF1E6B001F4A01 /* Initial Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Initial Screen.swift"; sourceTree = "<group>"; };
 		89A54E0720C71FE400B3155E /* Polling Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Polling Places.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A54E0A20C71FE400B3155E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89A54E0C20C71FE400B3155E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				89A54E0C20C71FE400B3155E /* ViewController.swift */,
+				893B372B20CF1E6B001F4A01 /* Initial Screen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			files = (
 				89A54E1D20C724ED00B3155E /* Model.swift in Sources */,
 				89A54E0D20C71FE400B3155E /* ViewController.swift in Sources */,
+				893B372C20CF1E6B001F4A01 /* Initial Screen.swift in Sources */,
 				89A54E0B20C71FE400B3155E /* AppDelegate.swift in Sources */,
 				89A54E2320C7259600B3155E /* Networking.swift in Sources */,
 			);

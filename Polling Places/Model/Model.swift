@@ -8,22 +8,16 @@
 
 import Foundation
 
-struct PollingPlaces{
-    
-    let address: String
-    let name: String
-    let precinct: String
-    let location: String
-    
-    
-    init(dictionary: [String : AnyObject]) {
-        name = dictionary["NAME"] as! String
-        precinct = dictionary["PRECINCT"] as! String
-        address = dictionary["ADDRESS"] as! String
-        location = dictionary["LOCATION"] as! String
-        
-    }
+struct PollingPlaces {
+    let sheet1: [Sheet1]
 }
 
+struct Sheet1 {
+    let precinct: Int
+    let name, address: String
+    let location: Location
+}
 
-
+enum Location {
+    case map
+}

@@ -9,13 +9,13 @@
 import Foundation
 
 
-
+var arrayOfPollingPlaces = [AnyObject]()
 
 
 class Networking {
     
     
-    var arrayOfPollingPlaces = [Any]()
+   
     
     func buildURL() ->URL {
         let sheetID = "10lmotsMdxB97YqzuDMfcCcRRhV8lTbOX51awdMlaVT0"
@@ -43,9 +43,15 @@ class Networking {
             guard let unwrappedData = data else {return}
             do {
                 
-                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! NSDictionary
+               // let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: .allowFragments) as! NSDictionary
+                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! [String:AnyObject]
                 
                 let pollingArray = jsonData["Sheet1"]
+                
+                arrayOfPollingPlaces = jsonData["Sheet1"] as! [AnyObject]
+                
+                
+               // self.arrayOfPollingPlaces = jsonData["Sheet1"] as! [PollingPlaces]
                 
                 //NEED TO WRITE METHOD TO MAP JSON TO POLLINGPLACES MODEL HERE
                 
@@ -54,7 +60,7 @@ class Networking {
                 //PRINT OUT ANY DATA COMBINATION HERE
                 
                 
-                print(pollingArray)
+                print(arrayOfPollingPlaces[0]["NAME"])
                 
                 
             } catch {
