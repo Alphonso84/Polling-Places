@@ -29,8 +29,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let NewViewController = storyboard?.instantiateViewController(withIdentifier: "PollingPlaceDetailView") as! PollingPlaceDetailView
         
-        NewViewController.stringForAddressLabel = "\(String(describing:  arrayOfPollingPlaces[indexPath.row]["ADDRESS"])) "
-        NewViewController.stringForNameLabel = "\(String(describing:  arrayOfPollingPlaces[indexPath.row]["NAME"]))"
+        NewViewController.stringForAddressLabel =  arrayOfPollingPlaces[indexPath.row]["ADDRESS"] as! String
+        NewViewController.stringForNameLabel = arrayOfPollingPlaces[indexPath.row]["NAME"] as! String
         
         navigationController?.show(NewViewController, sender: tableView)
     }
