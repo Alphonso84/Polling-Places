@@ -131,18 +131,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="S1y-hP-ctt" firstAttribute="leading" secondItem="1vM-nZ-0SN" secondAttribute="leading" constant="20" id="1Na-4p-0UM"/>
-                            <constraint firstItem="GzS-KA-yKK" firstAttribute="leading" secondItem="K5i-x3-nAE" secondAttribute="leading" id="3i0-lf-D05"/>
+                            <constraint firstAttribute="trailing" secondItem="GzS-KA-yKK" secondAttribute="trailing" id="30c-si-BMi"/>
                             <constraint firstItem="S1y-hP-ctt" firstAttribute="leading" secondItem="MBj-8R-Gd7" secondAttribute="leading" id="I53-Od-U6H"/>
-                            <constraint firstItem="MBj-8R-Gd7" firstAttribute="centerX" secondItem="GzS-KA-yKK" secondAttribute="centerX" id="K1f-PF-OWd"/>
+                            <constraint firstItem="GzS-KA-yKK" firstAttribute="bottom" secondItem="1vM-nZ-0SN" secondAttribute="bottom" id="LO4-Bh-Du5"/>
+                            <constraint firstItem="GzS-KA-yKK" firstAttribute="leading" secondItem="K5i-x3-nAE" secondAttribute="leading" id="Qws-xK-HZk"/>
                             <constraint firstItem="MBj-8R-Gd7" firstAttribute="top" secondItem="S1y-hP-ctt" secondAttribute="bottom" constant="99" id="Tfu-Sm-sQN"/>
-                            <constraint firstAttribute="trailing" secondItem="GzS-KA-yKK" secondAttribute="trailing" id="eSb-SM-72w"/>
-                            <constraint firstItem="GzS-KA-yKK" firstAttribute="top" secondItem="MBj-8R-Gd7" secondAttribute="bottom" constant="56" id="kun-fV-ng4"/>
-                            <constraint firstItem="GzS-KA-yKK" firstAttribute="bottom" secondItem="1vM-nZ-0SN" secondAttribute="bottom" id="l1H-S2-Scc"/>
+                            <constraint firstItem="GzS-KA-yKK" firstAttribute="top" secondItem="MBj-8R-Gd7" secondAttribute="bottom" constant="56" id="V7g-Oy-OHz"/>
+                            <constraint firstItem="GzS-KA-yKK" firstAttribute="centerX" secondItem="MBj-8R-Gd7" secondAttribute="centerX" id="bfM-kF-hCA"/>
                             <constraint firstItem="S1y-hP-ctt" firstAttribute="top" secondItem="1vM-nZ-0SN" secondAttribute="top" constant="25" id="o7w-Zg-be6"/>
                             <constraint firstItem="S1y-hP-ctt" firstAttribute="trailing" secondItem="MBj-8R-Gd7" secondAttribute="trailing" id="ssL-Lp-OuY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1vM-nZ-0SN"/>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="MBj-8R-Gd7" id="W4m-7r-MDC"/>
+                        <outlet property="mapView" destination="GzS-KA-yKK" id="Pgk-91-yGI"/>
+                        <outlet property="nameLabel" destination="S1y-hP-ctt" id="jgO-7c-BEu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBI-RN-Lk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

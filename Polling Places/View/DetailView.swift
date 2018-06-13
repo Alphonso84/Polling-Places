@@ -13,7 +13,10 @@ import MapKit
 
 class PollingPlaceDetailView: UIViewController {
     
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var addressLabel: UILabel!
     
     
     
