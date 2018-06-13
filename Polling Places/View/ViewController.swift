@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = arrayOfPollingPlaces[indexPath.row]["NAME"] as? String
-       
+        
         
         return cell
     }
@@ -29,8 +29,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let NewViewController = storyboard?.instantiateViewController(withIdentifier: "PollingPlaceDetailView") as! PollingPlaceDetailView
         
-        NewViewController.stringForAddressLabel =  arrayOfPollingPlaces[indexPath.row]["ADDRESS"] as! String
-        NewViewController.stringForNameLabel = arrayOfPollingPlaces[indexPath.row]["NAME"] as! String
+        NewViewController.stringForAddressLabel =  arrayOfPollingPlaces[indexPath.row]["ADDRESS"] as? String
+        NewViewController.stringForNameLabel = arrayOfPollingPlaces[indexPath.row]["NAME"] as? String
         
         navigationController?.show(NewViewController, sender: tableView)
     }
