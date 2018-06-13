@@ -26,7 +26,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        present(PollingPlaceDetailView(), animated: true, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+        
+        let NewViewController = storyboard?.instantiateViewController(withIdentifier: "PollingPlaceDetailView") as! PollingPlaceDetailView
+        
+        NewViewController.stringForAddressLabel = "\(String(describing:  arrayOfPollingPlaces[indexPath.row]["ADDRESS"])) "
+        NewViewController.stringForNameLabel = "\(String(describing:  arrayOfPollingPlaces[indexPath.row]["NAME"]))"
+        
+        navigationController?.show(NewViewController, sender: tableView)
     }
     
     override func viewWillAppear(_ animated: Bool) {

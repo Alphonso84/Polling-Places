@@ -15,9 +15,16 @@ class PollingPlaceDetailView: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var addressLabel: UILabel!
     
+    var stringForNameLabel: String!
+    var stringForAddressLabel: String!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+         nameLabel.text! = stringForNameLabel
+         addressLabel.text! = stringForAddressLabel
+    }
     
     
 }
