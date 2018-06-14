@@ -13,9 +13,9 @@ var arrayOfPollingPlaces = [AnyObject]()
 
 
 class Networking {
+    // https://docs.google.com/spreadsheets/d/10lmotsMdxB97YqzuDMfcCcRRhV8lTbOX51awdMlaVT0/edit?usp=sharing
     
-    
-   
+    //https://docs.google.com/spreadsheets/d/10lmotsMdxB97YqzuDMfcCcRRhV8lTbOX51awdMlaVT0/edit?usp=sharing
     
     func buildURL() ->URL {
         let sheetID = "10lmotsMdxB97YqzuDMfcCcRRhV8lTbOX51awdMlaVT0"
@@ -29,7 +29,7 @@ class Networking {
     }
     
     
-   
+    
     
     func parseJSON() {
         let unwrappedURL = buildURL()
@@ -43,24 +43,12 @@ class Networking {
             guard let unwrappedData = data else {return}
             do {
                 
-               // let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: .allowFragments) as! NSDictionary
-                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! [String:AnyObject]
-                
-                let pollingArray = jsonData["Sheet1"]
+                // let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: .allowFragments) as! NSDictionary
+                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: .allowFragments) as! [String:AnyObject]
                 
                 arrayOfPollingPlaces = jsonData["Sheet1"] as! [AnyObject]
                 
-                
-               // self.arrayOfPollingPlaces = jsonData["Sheet1"] as! [PollingPlaces]
-                
-                //NEED TO WRITE METHOD TO MAP JSON TO POLLINGPLACES MODEL HERE
-                
-               
-                
-                //PRINT OUT ANY DATA COMBINATION HERE
-                
-                
-                print(arrayOfPollingPlaces[0]["NAME"])
+                print(arrayOfPollingPlaces[0]["NAME"]!!)
                 
                 
             } catch {
